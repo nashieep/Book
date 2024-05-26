@@ -19,7 +19,7 @@ const pages = [
     // Add more pages up to 29
     {
         image: 'img/page5.jpg',
-        caption: 'Our wedding day.'
+        caption: ''
     },
     {
         image: 'img/page7.jpg',
