@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.book-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    background-color:  rgba(255, 255, 255, 0.8); /* Semi-transparent white */;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+}
+.book-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit; /* Inherit background from the parent */
+    backdrop-filter: blur(10px); /* Blur effect */
+    z-index: -1;
+    filter: brightness(0.8); /* Optionally adjust brightness to make the text stand out more */
+    border-radius: 10px;
+}
+.book-page {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-page img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+    color: #b91d1d;
+    background-color: transparent;
+    border: none;
+}
+
+.navigation.previous {
+    left: 10px;
+}
+
+.navigation.next {
+    right: 10px;
+}
+
+.navigation:hover {
+    color: #883832;
+}
+
+#previousButton {
+    display: none; /* Initially hide the previous button */
+}
+
